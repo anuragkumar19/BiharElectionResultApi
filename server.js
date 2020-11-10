@@ -1,9 +1,13 @@
 const express = require('express');
 const request = require('request');
 const cheerio = require('cheerio');
+const cors = require('cors');
 
 // Init App
 const app = express();
+
+// CORS
+app.use(cors());
 
 app.get('/', (req, res) => {
     const data = [];
